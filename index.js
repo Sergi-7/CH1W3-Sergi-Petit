@@ -16,28 +16,5 @@ const daenerys = new Luchador(
 const tyrion = new Asesor("Tyirion", Personaje.familia.stark, 28, daenerys);
 const bronn = new Escudero("Bronn", Personaje.familia.stark, 28, jaime, 8);
 const personajes = [joffrey, jaime, daenerys, tyrion, bronn];
-
 const list = document.querySelector(".characters-list");
 const character = document.querySelector(".character");
-const imgList = [
-  "./img/joffrey.jpg",
-  "./img/jaime.jpg",
-  "./img/daenerys.jpg",
-  "./img/tyrion.jpg",
-  "./img/bronn.jpg",
-];
-
-function addCharacters(personajesArray) {
-  character.remove();
-  for (let i = 0; i < personajesArray.length; i++) {
-    const newcharacter = character.cloneNode(true);
-    const h2 = newcharacter.querySelector(".character__name");
-    const img = newcharacter.querySelector(".character__picture");
-    const edad = newcharacter.querySelector(".character__age");
-    h2.innerText = personajesArray[i].nombre;
-    img.src = imgList[i];
-    edad.innerText = personajesArray[i].edad;
-    list.appendChild(newcharacter);
-  }
-}
-addCharacters(personajes);
