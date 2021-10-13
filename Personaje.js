@@ -1,4 +1,6 @@
-class Personaje {
+import Componente from "./Componente.js";
+
+class Personaje extends Componente {
   nombre;
   edad;
   vivo = true;
@@ -12,6 +14,7 @@ class Personaje {
   };
 
   constructor(nombre, familia, edad) {
+    super();
     this.nombre = nombre;
     this.familia = familia;
     this.edad = edad;
